@@ -1,0 +1,28 @@
+[user]
+	name = Peter Onneby
+	email = ponneby@xebia.fr
+[core]
+	excludesfile = /Users/ponneby/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[alias]
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        st = status
+        co = checkout
+[color]
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
+[url "https://github"]
+	insteadOf = git://github
+[url "https://"]
+	insteadOf = git://
