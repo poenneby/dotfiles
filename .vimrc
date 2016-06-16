@@ -45,7 +45,7 @@ set ttyscroll=10
 set encoding=utf-8
 set tabstop=2
 set nowrap
-set number
+" set number
 set expandtab
 set nowritebackup
 set noswapfile
@@ -53,6 +53,7 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
+set relativenumber
 
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
