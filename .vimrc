@@ -77,6 +77,10 @@ map <Up>   gk
 nnoremap j gj
 nnoremap k gk
 
+" Move line
+noremap <c-s-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
+noremap <c-s-down> ddp
+
 " format the entire file
 nmap <leader>fef ggVG=
 
