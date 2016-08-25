@@ -18,14 +18,15 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'slim-template/vim-slim'
-
+Bundle 'moll/vim-node'
 Plugin 'maksimr/vim-jsbeautify'
 
 Plugin 'editorconfig/editorconfig-vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,8 +139,9 @@ autocmd FileType javascript :call SyntasticESlintChecker()
 nnoremap <silent> t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 600
-let g:ctrlp_max_depth = 5
+let g:ctrlp_max_files = 0
+let g:ctrlp_max_depth = 10
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " JsBeautify
 nnoremap <leader>1 yypVr=
