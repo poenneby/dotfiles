@@ -31,6 +31,7 @@ Plugin 'editorconfig/editorconfig-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax on
 
 let mapleader=","
 
@@ -55,6 +56,13 @@ set hlsearch
 set ignorecase
 set smartcase
 set relativenumber
+
+" folding
+set foldcolumn=4
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
