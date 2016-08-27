@@ -171,6 +171,9 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
+" Key spacing
+nnoremap <leader>fk :%s/\("*\w\+\"*\): /\1 : /g<cr>
+
 " Open file shortcuts
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
