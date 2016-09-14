@@ -37,6 +37,7 @@ filetype plugin indent on    " required
 syntax on
 
 let mapleader=","
+noremap \ ,
 
 color jellybeans
 
