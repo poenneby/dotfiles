@@ -26,6 +26,7 @@ Bundle 'moll/vim-node'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'flazz/vim-colorschemes'
 
 Plugin 'editorconfig/editorconfig-vim'
 
@@ -61,7 +62,7 @@ set relativenumber
 
 " folding
 set foldcolumn=4
-set foldmethod=indent   
+set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
