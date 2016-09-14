@@ -147,6 +147,13 @@ let g:syntastic_javascript_checkers = ["eslint"]
 
 autocmd FileType javascript :call SyntasticESlintChecker()
 
+function ESLintFix()
+  silent execute "!./node_modules/.bin/eslint --fix %"
+  edit! %
+endfunction
+
+nnoremap <leader>fl :call ESLintFix()<CR>
+
 " CtrlP
 nnoremap <silent> t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 2
