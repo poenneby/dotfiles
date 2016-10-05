@@ -29,6 +29,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'lambdatoast/elm.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -39,7 +40,7 @@ syntax on
 let mapleader=","
 noremap \ ,
 
-color jellybeans
+color OceanicNext
 
 set cursorline
 set expandtab
@@ -89,6 +90,13 @@ map <Down> gj
 map <Up>   gk
 nnoremap j gj
 nnoremap k gk
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+noremap H ^
+noremap L $
 
 " Move line
 noremap <c-s-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
