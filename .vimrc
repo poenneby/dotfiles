@@ -33,6 +33,8 @@ Plugin 'lambdatoast/elm.vim'
 
 Plugin 'ternjs/tern_for_vim'
 
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +45,9 @@ let mapleader=","
 noremap \ ,
 
 color OceanicNext
+
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_github=1
 
 set cursorline
 set expandtab
