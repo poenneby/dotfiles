@@ -77,6 +77,9 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
+" Vertical diffs
+set diffopt+=vertical
+
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
 autocmd BufWritePre *.go :%s/\s\+$//e
