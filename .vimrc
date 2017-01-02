@@ -199,6 +199,10 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
+
+" 2 space indentation for yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " Key spacing
 nnoremap <leader>fk :%s/\("*\w\+\"*\): /\1 : /g<cr>
 
