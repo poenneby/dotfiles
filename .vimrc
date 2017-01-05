@@ -109,9 +109,20 @@ nnoremap N Nzzzv
 noremap H ^
 noremap L $
 
-" Move line
-noremap <c-s-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
-noremap <c-s-down> ddp
+" Move multiple lines
+nnoremap <c-s-j> :m .+1<CR>==
+nnoremap <c-s-k> :m .-2<CR>==
+inoremap <c-s-j> <Esc>:m .+1<CR>==gi
+inoremap <c-s-k> <Esc>:m .-2<CR>==gi
+vnoremap <c-s-j> :m '>+1<CR>gv=gv
+vnoremap <c-s-k> :m '<-2<CR>gv=gv
+
+nnoremap <c-s-down> :m .+1<CR>==
+nnoremap <c-s-up> :m .-2<CR>==
+inoremap <c-s-down> <Esc>:m .+1<CR>==gi
+inoremap <c-s-up> <Esc>:m .-2<CR>==gi
+vnoremap <c-s-down> :m '>+1<CR>gv=gv
+vnoremap <c-s-up> :m '<-2<CR>gv=gv
 
 " format the entire file
 nmap <leader>fef ggVG=
