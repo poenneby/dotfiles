@@ -192,6 +192,10 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 15
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" CtrlPTag
+nnoremap <leader>. :CtrlPTag<cr>
+
+
 " JsBeautify
 nnoremap <leader>1 yypVr=
 
