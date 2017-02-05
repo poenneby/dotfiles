@@ -189,7 +189,7 @@ nnoremap <silent> t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
-let g:ctrlp_max_depth = 10
+let g:ctrlp_max_depth = 15
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " JsBeautify
