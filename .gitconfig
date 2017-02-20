@@ -6,17 +6,18 @@
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [push]
 	default = simple
 [alias]
-        lol = log --graph --decorate --pretty=oneline --abbrev-commit
-        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-        st = status
-        co = checkout
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  st = status
+  co = checkout
+  ctags = !.git/hooks/ctags
 [color]
         branch = auto
         diff = auto
@@ -26,3 +27,5 @@
 	insteadOf = git://github
 [url "https://"]
 	insteadOf = git://
+[init]
+	templatedir = ~/.git_template
