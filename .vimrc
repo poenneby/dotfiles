@@ -46,6 +46,7 @@ let mapleader=","
 noremap \ ,
 
 color OceanicNext
+highlight Comment cterm=italic
 
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
@@ -76,6 +77,7 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+
 
 " Vertical diffs
 set diffopt+=vertical
