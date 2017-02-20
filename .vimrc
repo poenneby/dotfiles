@@ -4,26 +4,24 @@ filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" My Bundles
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 'kana/vim-textobj-user'
-Bundle 'slim-template/vim-slim'
-Bundle 'moll/vim-node'
+" My Plugins
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'slim-template/vim-slim'
+Plugin 'moll/vim-node'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -36,8 +34,6 @@ Plugin 'ternjs/tern_for_vim'
 
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
-
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
@@ -140,14 +136,6 @@ noremap <tab> <c-w><c-w>
 
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
-
-" Resize buffers
-if bufwinnr(1)
-  nmap Ä <C-W><<C-W><
-  nmap Ö <C-W>><C-W>>
-  nmap ö <C-W>-<C-W>-
-  nmap ä <C-W>+<C-W>+
-endif
 
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
