@@ -41,7 +41,11 @@ syntax on
 let mapleader=","
 noremap \ ,
 
-color OceanicNext
+try
+  color OceanicNext
+catch
+endtry
+
 highlight Comment cterm=italic
 
 let vim_markdown_preview_hotkey='<C-m>'
@@ -185,10 +189,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " CtrlPTag
 nnoremap <leader>. :CtrlPTag<cr>
 
-
-" JsBeautify
-nnoremap <leader>1 yypVr=
-
 nnoremap <leader>ff :%!js-beautify -j -q -B -f -<CR>
 
 " JSBeautify
@@ -208,8 +208,55 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " 2 space indentation for yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-" Key spacing
-nnoremap <leader>fk :%s/\("*\w\+\"*\): /\1 : /g<cr>
+let s:comment_map = {
+    \   "c": '\/\/',
+    \   "cpp": '\/\/',
+    \   "go": '\/\/',
+    \   "java": '\/\/',
+    \   "javascript": '\/\/',
+    \   "lua": '--',
+    \   "scala": '\/\/',
+    \   "php": '\/\/',
+    \   "python": '#',
+    \   "ruby": '#',
+    \   "rust": '\/\/',
+    \   "sh": '#',
+    \   "desktop": '#',
+    \   "fstab": '#',
+    \   "conf": '#',
+    \   "profile": '#',
+    \   "bashrc": '#',
+    \   "bash_profile": '#',
+    \   "mail": '>',
+    \   "eml": '>',
+    \   "bat": 'REM',
+    \   "ahk": ';',
+    \   "vim": '"',
+    \   "tex": '%',
+    \ }
+
+function! ToggleComment()
+  if has_key(s:comment_map, &filetype)
+    let comment_leader = s:comment_map[&filetype]
+    if getline('.') =~ "^\\s*" . comment_leader . " "
+      " Uncomment the line
+      execute "silent s/^\\(\\s*\\)" . comment_leader . " /\\1/"
+    else
+      if getline('.') =~ "^\\s*" . comment_leader
+        " Uncomment the line
+        execute "silent s/^\\(\\s*\\)" . comment_leader . "/\\1/"
+      else
+        " Comment the line
+        execute "silent s/^\\(\\s*\\)/\\1" . comment_leader . " /"
+      end
+    end
+  else
+    echo "No comment leader found for filetype"
+  end
+endfunction
+
+nnoremap <leader><Space> :call ToggleComment()<cr>
+vnoremap <leader><Space> :call ToggleComment()<cr>
 
 " Open file shortcuts
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
