@@ -262,6 +262,7 @@ vnoremap <leader><Space> :call ToggleComment()<cr>
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
 map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+map ,vs :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
 " Copy relative file path of current buffer
 nmap cp :let @+ = expand("%")<cr>
