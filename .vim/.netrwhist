@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/ponneby/projects/clubmed/cm-b2c/src'
+let g:netrw_dirhist_2='/Users/ponneby/projects/clubmed/cm-b2c'
+let g:netrw_dirhist_3='/Users/ponneby/projects/clubmed/cm-graphql'
+let g:netrw_dirhist_4='/Users/ponneby/projects/xke/xke-vimtastic'
+let g:netrw_dirhist_5='/Users/ponneby/projects/xke/xke-vimtastic/src'
+let g:netrw_dirhist_6='/Users/ponneby/projects/xke/xke-vimtastic/src/public'

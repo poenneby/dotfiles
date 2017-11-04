@@ -12,3 +12,9 @@ vim +PluginInstall +qall
 ```
 brew install tmux
 ```
+
+```
+brew install cmake
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --tern-completer
+```

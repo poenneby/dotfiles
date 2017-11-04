@@ -34,6 +34,11 @@ Plugin 'ternjs/tern_for_vim'
 
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
+Plugin 'SirVer/ultisnips'
+
+Plugin 'Valloric/YouCompleteMe'
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
@@ -185,6 +190,17 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 15
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
+" (via http://stackoverflow.com/a/22253548/1626737)
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+let g:UltiSnipsExpandTrigger           = '<tab>'
+let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
 
 " CtrlPTag
 nnoremap <leader>. :CtrlPTag<cr>
