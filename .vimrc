@@ -69,7 +69,7 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
-set relativenumber
+set number
 
 " folding
 set foldcolumn=4
