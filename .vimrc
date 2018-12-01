@@ -67,6 +67,7 @@ set encoding=utf-8
 set tabstop=2
 set nowrap
 " set number
+set relativenumber
 set expandtab
 set nowritebackup
 set noswapfile
