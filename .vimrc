@@ -103,6 +103,9 @@ autocmd VimEnter * set nosc
 
 " Quick ESC
 imap jj <ESC>
+" Clear highlight with <enter>
+"
+nnoremap <CR> :noh<CR><CR>
 
 " Jump to the next row on long lines
 map <Down> gj
