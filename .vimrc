@@ -38,6 +38,8 @@ Plugin 'SirVer/ultisnips'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'guns/vim-clojure-static'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -286,6 +288,12 @@ map ,vs :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
 " Copy relative file path of current buffer
 nmap cp :let @+ = expand("%")<cr>
+
+" Clojure
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Quit with :Q
 command -nargs=0 Quit :qa!
