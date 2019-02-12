@@ -40,6 +40,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'vim-scripts/paredit.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
