@@ -157,6 +157,7 @@ nnoremap <leader><leader> <C-^>
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
+let g:NERDTreeNodeDelimiter = "\u00a0 "
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
