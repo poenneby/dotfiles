@@ -14,7 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'powerline/powerline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -88,6 +88,15 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
+" powerline
+set guifont=Fira\ Code:h14
+let g:Powerline_symbols = 'fancy'
+set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
 
 " Vertical diffs
 set diffopt+=vertical
