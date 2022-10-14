@@ -2,7 +2,7 @@
 	name = Peter Onneby
 	email = ponneby@xebia.fr
 [core]
-	excludesfile = /Users/ponneby/.gitignore_global
+	excludesFile = ~/.gitignore
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -29,3 +29,4 @@
 	insteadOf = git://
 [init]
 	templatedir = ~/.git_template
+
