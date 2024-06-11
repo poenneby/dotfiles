@@ -28,15 +28,10 @@ Plugin 'mxw/vim-jsx'
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'lambdatoast/elm.vim'
 
 Plugin 'ternjs/tern_for_vim'
 
 Plugin 'JamshedVesuna/vim-markdown-preview'
-
-Plugin 'SirVer/ultisnips'
-
-" Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-clojure-static'

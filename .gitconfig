@@ -1,6 +1,6 @@
 [user]
 	name = Peter Onneby
-	email = ponneby@xebia.fr
+	email = peter@onneby.com
 [core]
 	excludesFile = ~/.gitignore
 	editor = vim
