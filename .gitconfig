@@ -30,3 +30,7 @@
 [init]
 	templatedir = ~/.git_template
 
+[includeIf "gitdir:~/projects/s3/"]
+    path = .gitconfig-work
+[includeIf "gitdir:~/projects/poenneby/"]
+    path = .gitconfig-personal
