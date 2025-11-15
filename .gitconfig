@@ -1,36 +1,46 @@
-[user]
-	name = Peter Onneby
-	email = peter@onneby.com
 [core]
 	excludesFile = ~/.gitignore
 	editor = vim
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
+[init]
+  defaultBranch = main
 [push]
 	default = simple
+  autoSetupRemote = true
+  followTags = true
+[pull]
+	rebase = true
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   st = status
   co = checkout
-  ctags = !.git/hooks/ctags
 [color]
-        branch = auto
-        diff = auto
-        interactive = auto
-        status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 [url "https://github"]
 	insteadOf = git://github
 [url "https://"]
 	insteadOf = git://
-[init]
-	templatedir = ~/.git_template
 
-[includeIf "gitdir:~/projects/s3/"]
-    path = .gitconfig-work
 [includeIf "gitdir:~/projects/poenneby/"]
     path = .gitconfig-personal
+[includeIf "gitdir:~/projects/xt/"]
+    path = .gitconfig-work
+
